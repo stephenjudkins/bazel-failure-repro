@@ -1,0 +1,17 @@
+dependencies:
+  com.chuusai:
+    shapeless:
+      version: 2.3.2
+      lang: scala
+options:
+  resolverType: coursier
+  resolvers:
+  - id: "mavencentral"
+    type: "default"
+    url: https://repo.maven.apache.org/maven2/
+  versionConflictPolicy: highest
+  languages:
+  - java
+  - scala:2.12.7
+  buildHeader: [ "load(\"@rules_scala_annex//rules:scala.bzl\", scala_import = \"scala_import\")" ]
+  transitivity: runtime_deps
