@@ -5,6 +5,9 @@ load(
     "scala_library",
 )
 
+load("@rules_scala_annex//rules:providers.bzl", "reconfigure_deps_configuration")
+
+
 scala_version = "2.12.7"
 
 compiler_classpath = [
@@ -50,8 +53,10 @@ configure_zinc_scala(
     ],
 )
 
-alias(
+reconfigure_deps_configuration(
     name = "default_scala",
-    actual = ":zinc",
+    provider = ":zinc",
+    direct = "off",
+    used = "off",
     visibility = ["//visibility:public"],
 )

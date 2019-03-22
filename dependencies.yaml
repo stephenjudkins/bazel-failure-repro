@@ -1,8 +1,12 @@
 dependencies:
-  com.chuusai:
-    shapeless:
-      version: 2.3.2
-      lang: scala
+  org.scalamacros:
+    paradise_2.12.7:
+      version: 2.1.0
+      lang: scala/unmangled
+  com.google.guava:
+    guava:
+      version: '23.0'
+      lang: java
 options:
   resolverType: coursier
   resolvers:
@@ -13,5 +17,6 @@ options:
   languages:
   - java
   - scala:2.12.7
-  buildHeader: [ "load(\"@rules_scala_annex//rules:scala.bzl\", scala_import = \"scala_import\")" ]
-  transitivity: runtime_deps
+  buildHeader:
+    - load("@rules_scala_annex//rules:scala.bzl", scala_import = "scala_import")
+  transitivity: exports

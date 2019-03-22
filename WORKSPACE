@@ -19,9 +19,9 @@ http_archive(
 
 http_archive(
     name = "rules_scala_annex",
-    sha256 = "684fdce62c6dcd0d0880b29067dd5f391d58c8aa53a2b2fcc85a871c11d308c5",
-    strip_prefix = "rules_scala-2d5bae52690590d5184be02e69f30242ac4b9957",
-    urls = ["https://github.com/higherkindness/rules_scala/archive/2d5bae52690590d5184be02e69f30242ac4b9957.zip"]
+    sha256 = "9cb65b1485b5111a139dd5f1bbb5a59cc22b6de7700a660e36fccd12129ccc1b",
+    strip_prefix = "rules_scala-55117bb0c087d7c55f93527986dd4057c66710af",
+    urls = ["https://github.com/higherkindness/rules_scala/archive/55117bb0c087d7c55f93527986dd4057c66710af.zip"]
 )
 
 load(
